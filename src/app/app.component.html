@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div><h3>{{appTitle}} App Comp HTML </h3></div>
+            <hr>
+            <!--<input type="text" 
+                   class="form-contorl"
+                   (input)="onUpdateServer($event)"/>-->
+            <input type="text" 
+                   class="form-contorl"
+                   [(ngModel)]="newServerName"/>
+            <p>{{ newServerName }}</p>
+            <button 
+                class="btn btn-primary"
+                (click)="onServerCreated()"
+                [disabled]="!allowNewServer">Add server</button>
+            <p>{{newServerStatus}}</p>    
+            <app-server></app-server>
+            <app-server></app-server>
+        </div>
+    </div>
+</div>
