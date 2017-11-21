@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="jumbotron">
+    <div>
+      <tabset>
+        <tab heading="Data Binding">
+          <br>
+          <input type="text" class="form-contorl" [(ngModel)]="newServerName" />
+          <p>{{ newServerName }}</p>
+          <button class="btn btn-primary" (click)="onServerCreated()"
+                   [disabled]="!allowNewServer">Add server</button>
+          <p>{{newServerStatus}}</p>
+          <app-server></app-server>
+        </tab>
+        <tab heading="Routing">
+          <app-route></app-route>
+        </tab>
+        <tab heading="Attribute Directive">
+          <app-highlight></app-highlight>
+        </tab>
+      </tabset>
+    </div>
+
+  </div>

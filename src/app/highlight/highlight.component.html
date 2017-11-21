@@ -1,0 +1,8 @@
+<h4>Pick a color to highlight below text</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [myHighlight]="color">Text 1</p>
+<p [myHighlight]="color" defaultColor="violet"> Text 2 </p>
